@@ -151,7 +151,7 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
     </footer>
 
     <div class="tag mono">be2.lovable.app · #${n(t.order_number)} · ${n(c+1)}/${n(r)}</div>
-  </section>`},y=typeof window!="undefined"?window.location.origin:"https://besimple75.com",w=(t,c={})=>{const{autoPrint:r=!0,title:s}=c,e=s!=null?s:t.length===1?`Invoice ${t[0].order_number}`:`Invoices (${t.length})`,m=[];for(let d=0;d<t.length;d+=2){const f=d+2>=t.length,g=b(t[d],d,t.length),i=t[d+1]?b(t[d+1],d+1,t.length):"";m.push(`<div class="sheet ${f?"":"break"}">${g}${i}</div>`)}const a=m.join("");return`<!doctype html>
+  </section>`},y=typeof window!="undefined"?window.location.origin:"https://be-genius-eight.vercel.app",w=(t,c={})=>{const{autoPrint:r=!0,title:s}=c,e=s!=null?s:t.length===1?`Invoice ${t[0].order_number}`:`Invoices (${t.length})`,m=[];for(let d=0;d<t.length;d+=2){const f=d+2>=t.length,g=b(t[d],d,t.length),i=t[d+1]?b(t[d+1],d+1,t.length):"";m.push(`<div class="sheet ${f?"":"break"}">${g}${i}</div>`)}const a=m.join("");return`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
