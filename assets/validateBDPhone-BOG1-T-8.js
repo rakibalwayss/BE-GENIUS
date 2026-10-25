@@ -1,0 +1,1 @@
+const e=t=>{let s=(t!=null?t:"").trim().replace(/[\s\-()]/g,"");return s.startsWith("+880")?s="0"+s.slice(4):s.startsWith("880")&&(s="0"+s.slice(3)),s},i=t=>{const s=e(t);return/^01[3-9]\d{8}$/.test(s)},n="আপনার নম্বর সঠিক হয়নি — ১১ ডিজিটের মোবাইল নম্বর দিন (যেমন 01712345678)";export{n as B,i,e as n};

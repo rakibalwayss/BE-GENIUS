@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be Simple 75 | Premium Oversized T-Shirts, Bangladesh</title>
+    <meta name="description" content="Premium oversized t-shirts and hoodies, made in Bangladesh. Calm, minimal streetwear with cash on delivery across the country.">
+    <meta name="author" content="Be Simple 75" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#111111" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Be Simple 75" />
+
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://nazhstomkpvkbxxqefii.supabase.co" />
+    <!-- Product photos are served directly from Cloudflare R2 -->
+    <!-- <img> requests use a no-CORS connection; the crossorigin one serves fetch() of catalogue files -->
+    <link rel="preconnect" href="https://media.besimple75.com" />
+    <link rel="preconnect" href="https://media.besimple75.com" crossorigin />
+    <script>
+      // Speed: on the home page start the banner photo right away (before the app code loads).
+      // Uses the last photo this browser saw (Admin → Site Images), else the current default.
+      (function(){try{if(location.pathname!=="/")return;var m=JSON.parse(localStorage.getItem("bs75:site-images")||"{}");
+      var R="https://media.besimple75.com/";var phone=innerWidth<768;
+      var u=phone?(m.white_hero_mobile||R+"54604e27-0372-4366-a920-3ae2fffb363a.webp"):(m.white_hero_desktop||R+"79b6329e-dfd9-41db-ad25-f0432505f17c.webp");
+      var l=document.createElement("link");l.rel="preload";l.as="image";l.href=u;l.setAttribute("fetchpriority","high");document.head.appendChild(l)}catch(e){}})();
+    </script>
+
+    <!-- Collection links: start downloading that collection's product file
+         in parallel with the app code, instead of after it boots. -->
+    <script>
+      (function () {
+        var base = "https://media.besimple75.com/catalog/";
+        var pre = function (href) {
+          var l = document.createElement("link");
+          l.rel = "preload"; l.as = "fetch"; l.crossOrigin = "anonymous"; l.href = href;
+          document.head.appendChild(l);
+        };
+        if (location.pathname === "/") { pre(base + "home.json"); return; }
+        if (location.pathname === "/shop") { pre(base + "shop.json"); return; }
+        var m = location.pathname.match(/^\/(c|collections)\/([^\/?#]+)/);
+        if (!m) return;
+        var kind = m[1] === "c" ? "c" : "s";
+        var key = encodeURIComponent(decodeURIComponent(m[2])).replace(/%/g, "_");
+        // First-screen slice (24 cards) first, then the full list.
+        pre(base + kind + "/" + key + ".head.json");
+        pre(base + kind + "/" + key + ".json");
+      })();
+    </script>
+    <!-- Typography: Josefin Sans + Hind Siliguri (Bangla) with font-display: swap -->
+    <!-- Non-blocking: page paints immediately with fallback font, swaps when loaded -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=Josefin+Sans:wght@400;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=Josefin+Sans:wght@400;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=Josefin+Sans:wght@400;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" /></noscript>
+
+
+    <!-- OG / Twitter meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://media.besimple75.com/6d3c94c1-eb3b-4176-bb23-568743e9e887.webp">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Be Simple 75 premium oversized graphic t-shirt" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://media.besimple75.com/6d3c94c1-eb3b-4176-bb23-568743e9e887.webp">
+    
+    
+    
+    
+    
+
+    <script>
+      (function () {
+        try {
+          var p = location.pathname;
+          if (p.indexOf("/admin") === 0 || p.indexOf("/os") === 0) return;
+          var t = localStorage.getItem("bs_store_theme") === "black" ? "black" : "white";
+          document.documentElement.setAttribute("data-store-theme", t);
+        } catch (e) { document.documentElement.setAttribute("data-store-theme", "white"); }
+      })();
+    </script>
+    <!-- Critical inline CSS — prevents FOUC -->
+    <style>
+      html, body {
+        background-color: #0a0a0a;
+        color: #fafafa;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        overscroll-behavior-y: none;
+      }
+      /* Keep first paint neutral. Generated splash content could remain forever
+         when an old mobile webview failed before React mounted. */
+      #root:empty {
+        min-height: 100vh;
+        background: #0a0a0a;
+      }
+      html[data-store-theme="white"], html[data-store-theme="white"] body,
+      html[data-store-theme="white"] #root:empty { background-color: #FFFFFF; color: #0E0E0E; }
+    </style>
+
+    <!-- Brand identity for Google / social search results -->
+    <meta property="og:site_name" content="Be Simple 75" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"Be Simple 75","alternateName":"BS75","url":"https://besimple75.com/","potentialAction":{"@type":"SearchAction","target":"https://besimple75.com/shop?q={search_term_string}","query-input":"required name=search_term_string"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"Be Simple 75","url":"https://besimple75.com/","logo":"https://besimple75.com/icon-512.png","slogan":"Simple, by design."}
+    </script>
+
+    
+    
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];
+      // Speed: load the heavy pixel file on the first tap/scroll, or ~7 s after load; events (PageView too) wait in the queue meanwhile.
+      var go=function(){t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)};
+      var done=0,go1=function(){if(done)return;done=1;go()};var later=function(){setTimeout(function(){(f.requestIdleCallback||function(c){setTimeout(c,1)})(go1,{timeout:2000})},7000);['pointerdown','scroll','keydown'].forEach(function(n){f.addEventListener(n,go1,{once:true,passive:true})})};
+      if(b.readyState==='complete')later();else f.addEventListener('load',later,{once:true})}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      window.__FB_INITIAL_PV_ID__ = 'pv_' + Date.now() + '_' + Math.random().toString(36).slice(2,10);
+      fbq('init', '1689651605503716');
+      fbq('track', 'PageView', {}, { eventID: window.__FB_INITIAL_PV_ID__ });
+      window.__FB_PIXEL_INITED__ = '1689651605503716';
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <meta property="og:title" content="Be Simple 75 | Premium Oversized T-Shirts, Bangladesh">
+    <meta name="twitter:title" content="Be Simple 75 | Premium Oversized T-Shirts, Bangladesh">
+    <meta property="og:description" content="Premium oversized t-shirts and hoodies, made in Bangladesh. Calm, minimal streetwear with cash on delivery across the country.">
+    <meta name="twitter:description" content="Premium oversized t-shirts and hoodies, made in Bangladesh. Calm, minimal streetwear with cash on delivery across the country.">
+    <script type="module" crossorigin src="/assets/index-Ch8cEgYO.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-query-DBxj0xQy.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-router-C5Hi-lK7.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-supabase-Cp0Ykmlm.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-ui-CIwb5ehp.js">
+    <link rel="preload" as="style" crossorigin href="/assets/index-Kdcs0O7P.css" data-main-css onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/index-Kdcs0O7P.css"></noscript>
+  </head>
+
+  <body>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1689651605503716&ev=PageView&noscript=1" />
+    </noscript>
+    <div id="root"></div>
+    <script>
+      // Phone home page: show the banner photo straight away (plain copy of the top of the page),
+      // removed by the app once its own banner is on screen. Same photo as the preload above.
+      (function(){try{if(location.pathname!=="/"||innerWidth>=768)return;var m=JSON.parse(localStorage.getItem("bs75:site-images")||"{}");
+      var u=m.white_hero_mobile||"https://media.besimple75.com/54604e27-0372-4366-a920-3ae2fffb363a.webp";
+      var d=document.createElement("div");d.id="boot-shell";d.setAttribute("aria-hidden","true");
+      d.style.cssText="position:fixed;inset:0;z-index:2147483000;background:#fff;pointer-events:none;overflow:hidden";
+      d.innerHTML='<div style="height:36px;background:#0d0d0d"></div><div style="height:65px;background:#fff"></div>'+
+        '<img alt="" fetchpriority="high" decoding="async" style="display:block;width:100%;aspect-ratio:888/1024;object-fit:cover;object-position:top">';
+      d.querySelector("img").src=u;document.body.appendChild(d);
+      setTimeout(function(){var e=document.getElementById("boot-shell");if(e)e.remove();},8000);}catch(e){}})();
+    </script>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4fe92ebdd21e682',t:'MTc5MjkwMzU0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"25e43786f9f346e59034ba55e2207581","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+import{j as s}from"./vendor-query-DBxj0xQy.js";import{al as a}from"./index-Ch8cEgYO.js";const o=({className:r})=>s.jsx("span",{"aria-hidden":!0,className:a("spin-border",r),children:s.jsx("span",{className:"spin-border__beam"})});export{o as S};

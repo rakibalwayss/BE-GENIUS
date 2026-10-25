@@ -1,0 +1,1 @@
+function t(){const e=document.getElementById("boot-shell");!e||e.dataset.leaving||(e.dataset.leaving="1",e.style.transition="opacity 180ms ease-out",e.style.opacity="0",window.setTimeout(()=>e.remove(),200))}export{t as removeBootShell};

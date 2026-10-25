@@ -1,0 +1,1 @@
+import{r as i,j as d}from"./vendor-query-DBxj0xQy.js";import{al as n}from"./index-Ch8cEgYO.js";const e=i.forwardRef(({className:s,strong:a,lightning:g,solid:r,children:o,...l},t)=>d.jsx("div",{ref:t,className:n("rounded-2xl",r?"solid-card":a?"glass-strong":"glass",s),...l,children:o}));e.displayName="GlassCard";export{e as G};
