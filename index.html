@@ -80,9 +80,9 @@
         try {
           var p = location.pathname;
           if (p.indexOf("/admin") === 0 || p.indexOf("/os") === 0) return;
-          var t = localStorage.getItem("bs_store_theme") === "black" ? "black" : "white";
+          var t = localStorage.getItem("bs_store_theme") === "white" ? "white" : "black";
           document.documentElement.setAttribute("data-store-theme", t);
-        } catch (e) { document.documentElement.setAttribute("data-store-theme", "white"); }
+        } catch (e) { document.documentElement.setAttribute("data-store-theme", "black"); }
       })();
     </script>
     <!-- Critical inline CSS — prevents FOUC -->
@@ -323,7 +323,7 @@
     <!-- Prominent BE GENIUS Brand Logo -->
     <style>
 
-/* Prominent BE GENIUS Brand Logo Sizing */
+/* Prominent BE GENIUS Brand Logo Sizing & Responsive Left Alignment */
 [data-store-logo] {
   height: 24px !important;
   max-height: 28px !important;
@@ -337,9 +337,37 @@
   }
 }
 @media (min-width: 1024px) {
+  /* PC Webview: Shift BE GENIUS logo more to the left */
+  [data-store-nav] {
+    max-width: 88rem !important;
+    padding-left: 6px !important;
+  }
+  [data-store-nav] a[aria-label*="home"],
+  [data-store-nav] a:has(> [data-store-logo]),
+  a[aria-label*="BE GENIUS — home"] {
+    margin-left: -14px !important;
+    transform: translateX(-10px) !important;
+  }
   [data-store-logo] {
     height: 32px !important;
     max-height: 36px !important;
+  }
+}
+@media (min-width: 1280px) {
+  /* PC Full HD/Wide Webview: Elegant left anchoring */
+  [data-store-nav] {
+    max-width: 92rem !important;
+    padding-left: 4px !important;
+  }
+  [data-store-nav] a[aria-label*="home"],
+  [data-store-nav] a:has(> [data-store-logo]),
+  a[aria-label*="BE GENIUS — home"] {
+    margin-left: -22px !important;
+    transform: translateX(-16px) !important;
+  }
+  [data-store-logo] {
+    height: 34px !important;
+    max-height: 38px !important;
   }
 }
 
@@ -356,8 +384,8 @@
       (function(){try{if(location.pathname!=="/"||innerWidth>=768)return;var m=JSON.parse(localStorage.getItem("bs75:site-images")||"{}");
       var u=m.white_hero_mobile||"https://media.besimple75.com/54604e27-0372-4366-a920-3ae2fffb363a.webp";
       var d=document.createElement("div");d.id="boot-shell";d.setAttribute("aria-hidden","true");
-      d.style.cssText="position:fixed;inset:0;z-index:2147483000;background:#fff;pointer-events:none;overflow:hidden";
-      d.innerHTML='<div style="height:36px;background:#0d0d0d"></div><div style="height:65px;background:#fff"></div>'+
+      var t=localStorage.getItem("bs_store_theme")==="white"?"white":"black";var dark=t==="black";d.style.cssText="position:fixed;inset:0;z-index:2147483000;background:"+(dark?"#0a0a0a":"#fff")+";pointer-events:none;overflow:hidden";
+      d.innerHTML='<div style="height:36px;background:#0d0d0d"></div><div style="height:65px;background:'+(dark?"#0a0a0a":"#fff")+'"></div>'+
         '<img alt="" fetchpriority="high" decoding="async" style="display:block;width:100%;aspect-ratio:888/1024;object-fit:cover;object-position:top">';
       d.querySelector("img").src=u;document.body.appendChild(d);
       setTimeout(function(){var e=document.getElementById("boot-shell");if(e)e.remove();},8000);}catch(e){}})();
