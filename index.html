@@ -122,12 +122,12 @@
     <meta name="twitter:title" content="BE GENIUS | Premium Oversized T-Shirts, Bangladesh">
     <meta property="og:description" content="Premium oversized t-shirts and hoodies, made in Bangladesh. Calm, minimal streetwear with cash on delivery across the country.">
     <meta name="twitter:description" content="Premium oversized t-shirts and hoodies, made in Bangladesh. Calm, minimal streetwear with cash on delivery across the country.">
-    <script type="module" crossorigin src="/assets/index-Ch8cEgYO.js"></script>
+    <script type="module" crossorigin src="/assets/index-Ch8cEgYO.js?v=2.2"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-query-DBxj0xQy.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-router-C5Hi-lK7.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-supabase-Cp0Ykmlm.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-ui-CIwb5ehp.js">
-    <link rel="preload" as="style" crossorigin href="/assets/index-Kdcs0O7P.css" data-main-css onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/index-Kdcs0O7P.css"></noscript>
+    <link rel="preload" as="style" crossorigin href="/assets/index-Kdcs0O7P.css?v=2.2" data-main-css onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/index-Kdcs0O7P.css?v=2.2"></noscript>
   
     <!-- Performance & Clean Theme Optimizations -->
     <link rel="dns-prefetch" href="https://media.besimple75.com" />
@@ -374,43 +374,71 @@
     </style>
 
   
-    <!-- Smooth Mobile Drawer Transitions & Exact Cross Button Alignment -->
+        <!-- Complete Smooth Full-Screen Drawer & Exact Position Cross Button -->
     <style>
       @keyframes drawerSlideInRight {
         0% {
           transform: translate3d(100%, 0, 0);
-          opacity: 0.9;
         }
         100% {
           transform: translate3d(0, 0, 0);
-          opacity: 1;
         }
       }
 
-      /* Both White and Black theme drawers slide in smoothly from the right */
-      [data-white-drawer],
-      nav[aria-label="Menu"],
-      [data-store-drawer] {
-        animation: drawerSlideInRight 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-        will-change: transform !important;
-        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.18) !important;
-      }
-
-      /* Smooth slide out when closing */
-      [data-white-drawer][style*="100%"],
-      nav[aria-label="Menu"][style*="100%"],
-      [data-store-drawer][style*="100%"],
-      [data-store-drawer].translate-x-full {
-        animation: none !important;
-        transform: translate3d(100%, 0, 0) !important;
-        transition: transform 0.26s cubic-bezier(0.32, 0.72, 0, 1) !important;
-      }
-
-      /* Close Cross button sits in the EXACT SAME SPOT as the 3-bar navbar button */
+      /* Full viewport mobile drawer for BOTH White and Black Themes */
       @media (max-width: 1023px) {
+        [data-white-drawer],
+        [data-store-drawer] {
+          position: fixed !important;
+          inset: 0 !important;
+          top: 0 !important;
+          right: 0 !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          height: 100dvh !important;
+          max-width: 100vw !important;
+          z-index: 999999 !important;
+          animation: drawerSlideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+          will-change: transform !important;
+          box-shadow: -10px 0 35px rgba(0, 0, 0, 0.3) !important;
+          overflow-y: auto !important;
+          -webkit-overflow-scrolling: touch !important;
+          padding-top: 76px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          padding-bottom: 40px !important;
+        }
+
+        /* Smooth slide-out when closing */
+        [data-white-drawer].translate-x-full,
+        [data-store-drawer].translate-x-full {
+          animation: none !important;
+          transform: translate3d(100%, 0, 0) !important;
+          transition: transform 0.25s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        }
+
+        /* Solid background for White Theme */
+        html[data-store-theme="white"] [data-white-drawer],
+        html[data-store-theme="white"] [data-store-drawer] {
+          background-color: #FFFFFF !important;
+          background: #FFFFFF !important;
+          color: #0E0E0E !important;
+        }
+
+        /* Solid background for Black Theme */
+        html[data-store-theme="black"] [data-white-drawer],
+        html[data-store-theme="black"] [data-store-drawer],
+        html:not([data-store-theme="white"]) [data-store-drawer] {
+          background-color: #0E0E0E !important;
+          background: #0E0E0E !important;
+          color: #FFFFFF !important;
+        }
+
+        /* Cross button positioned at the EXACT SAME LOCATION under the thumb */
         [data-store-close],
-        [data-white-drawer] [aria-label="Close menu"],
-        nav[aria-label="Menu"] button[aria-label="Close menu"],
+        [data-white-drawer] button[aria-label="Close menu"],
         [data-store-drawer] button[aria-label="Close menu"],
         [data-store-drawer] [data-store-close] {
           position: fixed !important;
@@ -421,34 +449,36 @@
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
-          z-index: 100000 !important;
+          z-index: 1000001 !important;
           border-radius: 4px !important;
           cursor: pointer !important;
           touch-action: manipulation !important;
         }
 
-        html[data-store-theme="white"] [data-white-drawer] [aria-label="Close menu"],
-        html[data-store-theme="white"] nav[aria-label="Menu"] button[aria-label="Close menu"],
+        html[data-store-theme="white"] [data-white-drawer] button[aria-label="Close menu"],
         html[data-store-theme="white"] [data-store-close] {
           background: #FFFFFF !important;
           color: #0E0E0E !important;
-          border: 1px solid rgba(14, 14, 14, 0.25) !important;
+          border: 1px solid rgba(14, 14, 14, 0.2) !important;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
           transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
 
-        html[data-store-theme="white"] [data-white-drawer] [aria-label="Close menu"]:active,
-        html[data-store-theme="white"] [data-store-close]:active {
-          transform: scale(0.92) !important;
-          background: #F5F5F0 !important;
+        html[data-store-theme="black"] [data-store-close],
+        html:not([data-store-theme="white"]) [data-store-close] {
+          background: #0E0E0E !important;
+          color: #FFFFFF !important;
+          border: 1px solid rgba(220, 38, 38, 0.4) !important;
         }
 
-        /* Drawer background and full-screen spacing in White Theme */
-        html[data-store-theme="white"] [data-white-drawer],
-        html[data-store-theme="white"] nav[aria-label="Menu"] {
-          background: #FFFFFF !important;
-          color: #0E0E0E !important;
-          padding-top: 76px !important;
+        /* Theme toggle button always clearly visible on mobile navbar */
+        [data-store-toggle] {
+          display: flex !important;
+          width: 40px !important;
+          height: 40px !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 4px !important;
         }
       }
 
@@ -468,7 +498,7 @@
         color: var(--ink, #111111) !important;
       }
     </style>
-  </head>
+</head>
 
   <body>
     
