@@ -373,22 +373,50 @@
 
     </style>
 
+  
+    <!-- Full Mobile Drawer Layout - Spacious & Instant Accessibility -->
+    <style>
+      @media (max-width: 1023px) {
+        [data-store-drawer] {
+          inset: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          height: 100dvh !important;
+          max-width: 100vw !important;
+          padding-top: 16px !important;
+          z-index: 99999 !important;
+        }
+        [data-store-drawer] nav {
+          padding-top: 48px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          padding-bottom: 40px !important;
+        }
+        [data-store-close] {
+          top: 14px !important;
+          right: 16px !important;
+        }
+      }
+      [data-drawer-pref] {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-bottom: 12px !important;
+        margin-bottom: 18px !important;
+        border-bottom: 1px solid rgba(220, 38, 38, 0.25) !important;
+      }
+      html[data-store-theme="white"] [data-drawer-pref] {
+        border-bottom-color: var(--line, #e5e5e5) !important;
+      }
+      html[data-store-theme="white"] [data-drawer-pref] span {
+        color: var(--ink, #111111) !important;
+      }
+    </style>
   </head>
 
   <body>
     
     <div id="root"></div>
-    <script>
-      // Phone home page: show the banner photo straight away (plain copy of the top of the page),
-      // removed by the app once its own banner is on screen. Same photo as the preload above.
-      (function(){try{if(location.pathname!=="/"||innerWidth>=768)return;var m=JSON.parse(localStorage.getItem("bs75:site-images")||"{}");
-      var u=m.white_hero_mobile||"https://media.besimple75.com/54604e27-0372-4366-a920-3ae2fffb363a.webp";
-      var d=document.createElement("div");d.id="boot-shell";d.setAttribute("aria-hidden","true");
-      var t=localStorage.getItem("bs_store_theme")==="white"?"white":"black";var dark=t==="black";d.style.cssText="position:fixed;inset:0;z-index:2147483000;background:"+(dark?"#0a0a0a":"#fff")+";pointer-events:none;overflow:hidden";
-      d.innerHTML='<div style="height:36px;background:#0d0d0d"></div><div style="height:65px;background:'+(dark?"#0a0a0a":"#fff")+'"></div>'+
-        '<img alt="" fetchpriority="high" decoding="async" style="display:block;width:100%;aspect-ratio:888/1024;object-fit:cover;object-position:top">';
-      d.querySelector("img").src=u;document.body.appendChild(d);
-      setTimeout(function(){var e=document.getElementById("boot-shell");if(e)e.remove();},8000);}catch(e){}})();
-    </script>
+    
   </body>
 </html>
