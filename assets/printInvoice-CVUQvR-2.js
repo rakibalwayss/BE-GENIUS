@@ -27,7 +27,7 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
     <span class="ct bl"></span><span class="ct br"></span>
 
     <!-- giant kanji watermark -->
-    <div class="wm">領収</div>
+    <div class="wm">BE GENIUS</div>
 
     <!-- HEADER -->
     <header class="hd">
@@ -41,7 +41,7 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
         </div>
       </div>
       <div class="hd-r">
-        <div class="stamp">領収書</div>
+        <div class="stamp">INVOICE</div>
         <div class="hd-sub">INVOICE / RECEIPT</div>
       </div>
     </header>
@@ -49,15 +49,15 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
     <!-- ref bar -->
     <div class="ref">
       <div>
-        <div class="k">// 注文番号 · ORDER REF</div>
+        <div class="k">// ORDER REF</div>
         <div class="v mono">#${n(t.order_number)}</div>
       </div>
       <div>
-        <div class="k">// 日付 · ISSUED</div>
+        <div class="k">// ISSUED</div>
         <div class="v mono">${n(_(t.created_at))}</div>
       </div>
       <div>
-        <div class="k">// 支払 · PAYMENT</div>
+        <div class="k">// PAYMENT</div>
         <div class="v mono">${n((t.payment_method||"cod").toUpperCase())}</div>
       </div>
     </div>
@@ -70,7 +70,7 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
           <div class="cust-lbl">
             <span class="num">01</span>
             <span class="tt">BILL TO</span>
-            <span class="jp">お客様</span>
+            <span class="jp"></span>
           </div>
           <div class="cust-body">
             <div class="cn">${n(t.customer_name)}</div>
@@ -86,7 +86,7 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
         <div class="items-lbl">
           <span class="num">02</span>
           <span class="tt">MANIFEST</span>
-          <span class="jp">注文明細</span>
+          <span class="jp"></span>
         </div>
         <table class="items">
           <thead>
@@ -107,7 +107,7 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
             <img src="${n(l.image_url)}" alt="" />
             ${o.length>1?`<span class="dp-tag mono">${n([l.size,l.color].filter(Boolean).join(" · ")||l.product_name.slice(0,18))}</span>`:""}
           </div>`).join("");return`<div class="dpanel ${p}">
-          <div class="dp-lbl">DESIGN · デザイン</div>
+          <div class="dp-lbl">DESIGN</div>
           <div class="dp-grid">${u}</div>
           ${o.length===1?`<div class="dp-name">${n(o[0].product_name)}</div>`:`<div class="dp-name">${n(o.length)} designs</div>`}
         </div>`})()}
@@ -116,14 +116,14 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
     <!-- TOTALS -->
     <div class="tot">
       <div class="tot-l">
-        <div class="thanks">ありがとう<br/><small>Thank you.</small></div>
+        <div class="thanks">Thank you.</div>
       </div>
       <div class="tot-r">
         <div class="tr-row"><span>Delivery</span><span class="mono">${n(h(m))}</span></div>
         ${e>0?`<div class="tr-row disc"><span>Discount${t.coupon_code?` <span class="mono" style="opacity:.75">(${n(t.coupon_code)})</span>`:""}</span><span class="mono">− ${n(h(e))}</span></div>`:""}
         <div class="tr-row"><span>Subtotal</span><span class="mono">${n(h(s))}</span></div>
         <div class="tr-grand">
-          <span>合計 · TOTAL</span>
+          <span>TOTAL</span>
           <span class="mono">${n(h(t.total))}</span>
         </div>
       </div>
@@ -132,18 +132,18 @@ import{ar as k,aT as x}from"./index-Ch8cEgYO.js";/**
     <!-- FOOTER -->
     <footer class="ft">
       <div class="ft-l">
-        <div class="ft-jp">誠実 · 品質 · 信頼</div>
+        <div class="ft-jp">GENIUS, BY DESIGN.</div>
         <div class="ft-en">Cash on delivery accepted. Returns within 3 days of receipt.</div>
       </div>
       <div class="ft-r">
         ${(()=>{const i=(t.payment_method||"").toLowerCase();return i.includes("bkash")||i.includes("nagad")||i.includes("rocket")||i.includes("card")||i.includes("uddokta")||i==="paid"||i==="prepaid"?`<div class="hanko">
           <div class="hk-in">
-            <span class="hk-jp">受</span>
+            <span class="hk-jp"></span>
             <span class="hk-en">PAID</span>
           </div>
         </div>`:`<div class="hanko cod">
           <div class="hk-in">
-            <span class="hk-jp">代引</span>
+            <span class="hk-jp"></span>
             <span class="hk-en">COD</span>
           </div>
         </div>`})()}
